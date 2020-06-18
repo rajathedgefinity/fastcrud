@@ -1,0 +1,11 @@
+SQLAlchemy
+databases[postgresql]
+fastapi
+uvicorn
+passlib
+uuid
+typing
+pydantic
+DateTime
+requests
+asyncpg

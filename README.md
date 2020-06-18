@@ -1,0 +1,1 @@
+# FastAPI Crud Operations using PostgreSQL and SQLAlchemy
