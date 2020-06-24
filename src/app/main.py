@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from app.db.db import engine, database, Base
 
-from app.core.config import settings
+# from app.core.config import settings
 
 Base.metadata.create_all(engine)
 
 
 app = FastAPI(
-    title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    title='FASTCRUD', openapi_url="FASTCRUD/openapi.json"
 )
 
 
