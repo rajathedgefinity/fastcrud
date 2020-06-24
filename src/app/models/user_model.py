@@ -1,15 +1,16 @@
-from sqlalchemy import Table, String, CHAR, Column
-from app.db.db import metadata
+from sqlalchemy import String, CHAR, Column
 
-users = Table(
-    "users",
-    metadata,
-    Column("id"        , String, primary_key=True), # noqa
-    Column("username"  , String), # noqa
-    Column("password"  , String), # noqa
-    Column("first_name", String), # noqa
-    Column("last_name" , String), # noqa
-    Column("gender"    , CHAR), # noqa
-    Column("create_at" , String), # noqa
-    Column("status"    , CHAR), # noqa
-)
+from app.db.db import Base
+
+
+class Users(Base):
+    __tablename__ = "users"
+
+    id = Column(String, primary_key=True)
+    username = Column(String)
+    password = Column(String)
+    first_name = Column(String)
+    last_name = Column(String)
+    gender = Column(CHAR)
+    create_at = Column(String)
+    status = Column(CHAR)
